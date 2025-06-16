@@ -7,8 +7,8 @@ metadata:
 spec:
   destination:
     name: 'in-cluster'
-    namespace: 'argocd'
-  project: default
+    namespace: 'openshift-gitops'
+  project: exemplar
   source:
     path: argocd/
     repoURL: https://github.com/ihonwub/control-plane
