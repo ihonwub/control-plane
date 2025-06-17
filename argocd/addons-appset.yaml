@@ -10,6 +10,7 @@ spec:
               elements:  # from /charts/
               - addonChart: external-secrets
               - addonChart: kyverno
+              - addonChart: vso
           - clusters:
               selector:
                 matchExpressions:
