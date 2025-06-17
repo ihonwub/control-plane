@@ -1,15 +1,17 @@
-vault-secrets-operator:
-  controller:
-    kubeRbacProxy:
-      image:
-        repository: registry.redhat.io/openshift4/ose-kube-rbac-proxy
-        tag: v4.13.0
-    manager:
-      image:
-        repository: registry.connect.redhat.com/hashicorp/vault-secrets-operator
-        tag: 0.10.0-ubi
-      resources:
-        limits:
-          memory: 256Mi
-        requests:
-          memory: 128Mi
+# vault: {}
+
+# vault-secrets-operator:
+#   controller:
+#     kubeRbacProxy:
+#       image:
+#         repository: registry.redhat.io/openshift4/ose-kube-rbac-proxy
+#         tag: v4.13.0
+#     manager:
+#       image:
+#         repository: registry.connect.redhat.com/hashicorp/vault-secrets-operator
+#         tag: 0.10.0-ubi
+#       resources:
+#         limits:
+#           memory: 256Mi
+#         requests:
+#           memory: 128Mi
