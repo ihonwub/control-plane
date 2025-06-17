@@ -22,7 +22,5 @@ spec:
       name: '*'
       server: '*'
   clusterResourceWhitelist:
-    - group: ''
-      kind: Namespace
-    # - group: "*"
-    #   kind: "*"
+    - group: "*"
+      kind: "*"
