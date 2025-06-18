@@ -1,0 +1,29 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: instance
+spec:
+  generators:
+  - git:
+      repoURL: https://github.com/ihonwub/control-plane
+      revision: HEAD
+      directories:
+      - path: "applications-gitops/*"
+  template:
+    metadata:
+      name: 'instance-{{path.basename}}'
+    spec:
+      project: default
+      source:
+        helm:
+          releaseName: 'instance-{{path.basename}}'
+          valueFiles:
+          - '../../{{path}}/values.yaml'
+        repoURL: 'https://github.com/ihonwub/control-plane'
+        path: charts/applications-gitops
+        targetRevision: HEAD
+      destination:
+        namespace: 'openshift-gitops'
+        name: 'in-cluster'
+      syncPolicy:
+        automated: {}
