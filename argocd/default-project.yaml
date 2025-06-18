@@ -10,17 +10,17 @@
 #       name: '*'
 #       server: '*'
 
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: default
-spec:
-  sourceRepos:
-    - '*'
-  destinations:
-    - namespace: '*'
-      name: '*'
-      server: '*'
-  clusterResourceWhitelist:
-    - group: "*"
-      kind: "*"
+# apiVersion: argoproj.io/v1alpha1
+# kind: AppProject
+# metadata:
+#   name: default
+# spec:
+#   sourceRepos:
+#     - '*'
+#   destinations:
+#     - namespace: '*'
+#       name: '*'
+#       server: '*'
+#   clusterResourceWhitelist:
+#     - group: "*"
+#       kind: "*"

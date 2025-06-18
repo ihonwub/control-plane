@@ -8,7 +8,7 @@ spec:
       repoURL: https://github.com/ihonwub/control-plane
       revision: HEAD
       directories:
-      - path: "applications-gitops/*"
+      - path: "instance/*"
   template:
     metadata:
       name: 'instance-{{path.basename}}'
